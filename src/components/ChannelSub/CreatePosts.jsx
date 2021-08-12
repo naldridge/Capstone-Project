@@ -6,8 +6,12 @@ class CreatePosts extends Component {
         return (
             <div className="PostContainer">
                 <form>
-                    <input type="text" placeholder="Post Title" />
-                    <input type="text" placeholder="Post Content" />
+                    <div className="PostTitle">
+                        <input type="text" placeholder="Post Title" />
+                    </div>
+                    <div className="PostContent">
+                        <input type="text" placeholder="Post Content" />
+                    </div>
                     <button type="Submit">Post</button>
                 </form>
             </div>
