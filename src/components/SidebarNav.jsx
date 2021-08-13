@@ -1,33 +1,26 @@
-import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Home";
 
-import { Link } from "react-router-dom";
-import { SidebarNavData } from "./SidebarNavData";
-import "../App.css";
-import { IconContext } from "react-icons";
-
-function SidebarNav() {
-  const [sidebar] = useState(false);
-
+const SidebarNav = () => {
   return (
-    <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items">
-            {SidebarNavData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+    <div className="sidebarNav">
+      <Router>
+        <nav className="sideNav">
+          <div className="side-menu-items">
+            <Link to="/">Home</Link>
+            <Link to="/">Explore</Link>
+            <Link to="/">Forums</Link>
+            <Link to="/">Communities</Link>
+          </div>
         </nav>
-      </IconContext.Provider>
-    </>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
-}
+};
 
 export default SidebarNav;
