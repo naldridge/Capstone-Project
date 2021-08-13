@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Navbar from "./components/Navbar";
-// import SidebarNav from "./components/SidebarNav";
+import SidebarNav from "./components/SidebarNav";
 import HomePage from "./components/Homepage";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      {/* <SidebarNav /> */}
+      <SidebarNav />
       <HomePage />
     </div>
   );
