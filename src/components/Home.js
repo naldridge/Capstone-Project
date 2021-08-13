@@ -1,10 +1,10 @@
 function Home() {
-  return (
-    <div>
-      {/* <h2>Welcome to ____!</h2>
+    return (
+      <div>
+        {/* <h2>Welcome to ____!</h2>
         <h4>The Web Developer's Community</h4> */}
-    </div>
-  );
-}
+      </div>
+    );
+  }
 
-export default Home;
+  export default Home;
