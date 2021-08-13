@@ -1,18 +1,16 @@
-<<<<<<< HEAD
+import React from "react";
 import "./App.css";
-=======
-import Navbar from './components/Navbar';
-import './App.css';
->>>>>>> main
+import "bootstrap/dist/css/bootstrap.min.css";
+// import Button from "react-bootstrap/Button";
+import { Button, Card } from "react-bootstrap";
+import SplashPage from "./components/SplashPage";
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <header className="App-header"></header>
-=======
-      <Navbar />
->>>>>>> main
+      {/* <header className="App-header"></header> */}
+
+      <SplashPage />
     </div>
   );
 }
