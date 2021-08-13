@@ -47,3 +47,8 @@
 .homePage .usersSection {
   margin-left: 2rem;
 }
+
+.App-header {
+  border-radius: 20px;
+  padding: 5px;
+}

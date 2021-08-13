@@ -1,18 +1,17 @@
-<<<<<<< HEAD
 import "./App.css";
-=======
-import Navbar from './components/Navbar';
-import './App.css';
->>>>>>> main
+import React from "react";
+import Navbar from "./components/Navbar";
+// import SidebarNav from "./components/SidebarNav";
+import HomePage from "./components/Homepage";
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-      <header className="App-header"></header>
-=======
-      <Navbar />
->>>>>>> main
+      <header className="App-header">
+        <Navbar />
+      </header>
+      {/* <SidebarNav /> */}
+      <HomePage />
     </div>
   );
 }
