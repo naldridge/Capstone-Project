@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 import "./App.css";
-=======
-import Navbar from './components/Navbar';
-import './App.css';
->>>>>>> main
+import React from "react";
+import Form from "./components/Form";
+import Auth0ProviderWithHistory from "./components/auth0Provider";
 
 function App() {
   return (
-    <div className="App">
-<<<<<<< HEAD
-      <header className="App-header"></header>
-=======
-      <Navbar />
->>>>>>> main
-    </div>
+    <Auth0ProviderWithHistory>
+      <div className="App">
+        <Form />
+      </div>
+    </Auth0ProviderWithHistory>
   );
 }
 
