@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Button from "./Button";
+import Channel from "./pages/Channel";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -10,19 +11,19 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // const showButton = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setButton(false);
-  //   } else {
-  //     setButton(true);
-  //   }
-  // };
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
 
-  // useEffect(() => {
-  //   showButton();
-  // }, []);
+  useEffect(() => {
+    showButton();
+  }, []);
 
-  // window.addEventListener("resize", showButton);
+  window.addEventListener("resize", showButton);
 
   return (
     <>
@@ -40,51 +41,21 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav=links" onClick={closeMobileMenu}>
-              Channels
+            <Link
+              to="./components/pages/Channel"
+              className="nav=links"
+              onClick={closeMobileMenu}
+            >
+              Channel
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav=links" onClick={closeMobileMenu}>
-              Sign Up
+              About the Team
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav=links" onClick={closeMobileMenu}>
-              User Profile
-            </Link>
-            <ul>
-              <li className="nav-item">
-                <Link to="/" className="nav=links" onClick={closeMobileMenu}>
-                  Splash Page
-                </Link>
-                <ul>
-                  <li className="nav-item">
-                    <Link
-                      to="/"
-                      className="nav=links"
-                      onClick={closeMobileMenu}
-                    >
-                      About the team
-                    </Link>
-                    <ul>
-                      <li className="nav-item">
-                        <Link
-                          to="/"
-                          className="nav=links"
-                          onClick={closeMobileMenu}
-                        >
-                          Messaging
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
           </li>
         </ul>
-        <Button>Hello </Button>
+        <Button>Sign Up</Button>
       </nav>
     </>
   );

@@ -1,14 +1,17 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Foo from "./components/Foo";
+
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import Channel from "./components/pages/Channel";
 
 function App() {
   return (
     <>
       <Router>
-        <p>Navbar says HI!</p>
-        <Foo />
         <Navbar />
+        <Home />
+        <Footer />
       </Router>
     </>
   );
