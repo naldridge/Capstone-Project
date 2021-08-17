@@ -158,3 +158,9 @@
   width: 15px;
   height: 15px;
 }
+
+.profilePage {
+  margin: auto;
+  justify-content: center;
+  display: inline;
+}
