@@ -1,25 +1,12 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-// import Button from "react-bootstrap/Button";
-import { Container, Row, Col, Card, Button, Navbar } from "react-bootstrap";
-// import Navbar from "./Navbar";
+
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import Navbar from "./Navbar";
 
 const SplashPage = () => {
   return (
     <>
-      <div>
-        <Container className="nav-header">
-          <Navbar expand="lg" variant="light" bg="light">
-            <Container>
-              <Navbar.Brand href="#">[NAME]</Navbar.Brand>
-              <Navbar.Brand href="#">Explore</Navbar.Brand>
-              <Navbar.Brand href="#" className="justify-content-end">
-                Sign In
-              </Navbar.Brand>
-            </Container>
-          </Navbar>
-        </Container>
-      </div>
+      <Navbar />
       <div className="splashMainContainer">
         <Container fluid className="welcomeText">
           <Row>
