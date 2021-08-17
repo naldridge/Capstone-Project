@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 
-const url = `https://localhost:300/add`;
+const url = `https://localhost:3333/post/add`;
 
 const Post = () => {
 
