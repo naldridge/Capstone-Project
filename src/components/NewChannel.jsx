@@ -32,7 +32,7 @@ class NewChannel extends Component {
                             value={name}
                             onChange={(e) => {
                                 this._handleChange('name', e.target.value)
-                            }
+                            }}
                         />
                         {uniqueName ?
                             <div>
