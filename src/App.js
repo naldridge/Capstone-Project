@@ -14,7 +14,6 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Channel from "./components/pages/Channel";
 
-
 function App() {
   const { isLoading } = useAuth0();
 
