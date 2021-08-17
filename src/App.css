@@ -2,12 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", sans-serif;
+  color: #a01a58;
 }
 
 .home,
 .channels {
   display: flex;
+  color: #723c70;
   height: 90vh;
   align-items: center;
   justify-content: center;
@@ -15,19 +16,17 @@
 }
 
 .about-the-team {
-  background-image: url("/images/img-1.jpg");
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #455e89;
   font-size: 100px;
 }
 
 .sign-up {
-  background-image: url("/images/img-8.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #0091ad;
   font-size: 100px;
 }
