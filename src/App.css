@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #44337a;
 }
 
 .App-logo {
@@ -56,4 +57,9 @@
   align-items: center;
   margin-left: 620px;
   margin-right: 380px;
+}
+
+.headerNav {
+  background-color: #44337a;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
 }
