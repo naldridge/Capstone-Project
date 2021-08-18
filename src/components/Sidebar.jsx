@@ -17,7 +17,8 @@ import {
   FiSettings,
 } from "react-icons/fi";
 import { IoPawOutline } from "react-icons/io5";
-import NavItem from "../components/NavItem";
+import NavItem from "./NavItem";
+import Communities from "./Communities";
 
 export default function Sidebar() {
   const [navSize, changeNavSize] = useState("large");
@@ -47,8 +48,9 @@ export default function Sidebar() {
           description="This is the description for the dashboard."
         />
         <NavItem navSize={navSize} icon={FiCalendar} title="Explore" active />
-        <NavItem navSize={navSize} icon={FiUser} title="Communities" />
-
+        <NavItem navSize={navSize} icon={FiUser} title="Communities">
+          <Communities />
+        </NavItem>
         <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
       </Flex>
 
