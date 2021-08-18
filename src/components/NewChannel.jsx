@@ -6,8 +6,25 @@ class NewChannel extends Component {
         this.state = {
             name: '',
             uniqueName: false,
-            description: ''
+            description: '',
+            channel_id: '',
         }
+    }
+
+    async _fetchAddChannel() {
+        const url = `http://localhost:3333/channel/add_channel`;
+        const requestData = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ channel_name: this.state.name, channel_description: this.state.description })
+        };
+
+        const response = await fetch(url, requestData).then(response => response.json());
+
+        //show us what the response looks like so we know what to reference to update the state
+        console.log("The API response is: ", response);
+
+        //reset the state to incorporate the new channel_id
     }
 
     _handleChange = (field, val) => {
@@ -18,6 +35,11 @@ class NewChannel extends Component {
 
    // _nameValidate = 
 
+
+    _handleSubmit = async (e) => {
+        e.preventDefault();
+
+    }
 
     render() {
         const { name, uniqueName, description } = this.state;
