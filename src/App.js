@@ -1,8 +1,9 @@
 import "./App.css";
 import React from "react";
 import Navbar from "./components/Navbar";
-import SidebarNav from "./components/SidebarNav";
-import HomePage from "./components/Homepage";
+import Sidebar from "./components/Sidebar";
+// import HomePage from "./components/Homepage";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <SidebarNav />
-      <HomePage />
+      <Sidebar />
+      {/* <HomePage /> */}
     </div>
   );
 }
