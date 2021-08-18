@@ -9,20 +9,14 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 
-export default function NavItem({ icon, title, description, active, navSize }) {
+export default function NavItem({ icon, title, active, navSize }) {
   return (
-    <Flex
-      mt={30}
-      flexDir="column"
-      w="100%"
-      alignItems={navSize == "small" ? "center" : "flex-start"}
-    >
+    <Flex mt={30} flexDir="column" w="100%">
       <Menu placement="right">
         <Link
-          backgroundColor={active && "#AEC8CA"}
           p={3}
           borderRadius={8}
-          _hover={{ textDecor: "none", backgroundColor: "#AEC8CA" }}
+          _hover={{ textDecor: "none", backgroundColor: "#9F7AEA" }}
           w={navSize == "large" && "100%"}
         >
           <MenuButton w="100%">
@@ -30,11 +24,9 @@ export default function NavItem({ icon, title, description, active, navSize }) {
               <Icon
                 as={icon}
                 fontSize="xl"
-                color={active ? "#82AAAD" : "gray.500"}
+                color={active ? "#2D3748" : "gray.500"}
               />
-              <Text ml={5} display={navSize == "small" ? "none" : "flex"}>
-                {title}
-              </Text>
+              <Text ml={5}>{title}</Text>
             </Flex>
           </MenuButton>
         </Link>

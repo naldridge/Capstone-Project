@@ -1,37 +1,24 @@
 import React, { useState } from "react";
-import {
-  Flex,
-  Text,
-  IconButton,
-  Divider,
-  Avatar,
-  Heading,
-} from "@chakra-ui/react";
-import {
-  FiMenu,
-  FiHome,
-  FiCalendar,
-  FiUser,
-  FiDollarSign,
-  FiBriefcase,
-  FiSettings,
-} from "react-icons/fi";
-import { IoPawOutline } from "react-icons/io5";
+import { Flex, Divider, Avatar, Heading } from "@chakra-ui/react";
+import { FiHome, FiSearch, FiSettings, FiMap, FiSmile } from "react-icons/fi";
+
 import NavItem from "../components/NavItem";
 
 export default function Sidebar() {
-  const [navSize, changeNavSize] = useState("large");
+  const [navSize] = useState("large");
   return (
     <Flex
       pos="sticky"
-      left="5"
-      h="70vh"
-      marginTop="2.5vh"
-      boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
+      left="2"
+      h="85vh"
+      background="#44337A"
+      marginTop="2vh"
+      boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.2)"
       borderRadius={navSize == "small" ? "15px" : "30px"}
       w={navSize == "small" ? "75px" : "200px"}
       flexDir="column"
       justifyContent="space-between"
+      color="white"
     >
       <Flex
         p="5%"
@@ -46,10 +33,10 @@ export default function Sidebar() {
           title="Dashboard"
           description="This is the description for the dashboard."
         />
-        <NavItem navSize={navSize} icon={FiCalendar} title="Explore" active />
-        <NavItem navSize={navSize} icon={FiUser} title="Communities" />
-
+        <NavItem navSize={navSize} icon={FiSearch} title="Explore" />
+        <NavItem navSize={navSize} icon={FiMap} title="Channels" />
         <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
+        <NavItem navSize={navSize} icon={FiSmile} title="About Us" />
       </Flex>
 
       <Flex
@@ -59,7 +46,6 @@ export default function Sidebar() {
         alignItems={navSize == "small" ? "center" : "flex-start"}
         mb={4}
       >
-        <Divider display={navSize == "small" ? "none" : "flex"} />
         <Flex mt={4} align="center">
           <Avatar size="sm" src="avatar-1.jpg" />
           <Flex
