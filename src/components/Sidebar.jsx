@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import { 
+  BrowserRouter as Router, 
+  Switch, 
+  Route, 
+  Link 
+} from 'react-router-dom';
 import {
   Flex,
   Text,
@@ -18,7 +24,30 @@ import {
 } from "react-icons/fi";
 import { IoPawOutline } from "react-icons/io5";
 import NavItem from "./NavItem";
-import Communities from "./Communities";
+import DisplayChannel from "./DisplayChannel";
+
+function showDefaultChannels() {
+  const { channel } = this.props;
+
+  return (
+    <ul className="defaultChannelsList">
+      <Router>
+      {
+        channel.map((data, index) => {
+          return (<li key={index}>
+            <Link to={`/channel/${data.slug}`}>{data.name}</Link>
+          </li>)
+        })
+      }
+        <Switch>
+          <Route path={`/channel/:${data.slug}`}>
+            <DisplayChannel />
+          </Route>
+        </Switch>
+      </Router>
+    </ul>
+  )
+}
 
 export default function Sidebar() {
   const [navSize, changeNavSize] = useState("large");
@@ -49,7 +78,7 @@ export default function Sidebar() {
         />
         <NavItem navSize={navSize} icon={FiCalendar} title="Explore" active />
         <NavItem navSize={navSize} icon={FiUser} title="Communities">
-          <Communities />
+          {showDefaultChannels()}
         </NavItem>
         <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
       </Flex>

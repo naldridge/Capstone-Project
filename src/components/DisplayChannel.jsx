@@ -6,6 +6,7 @@ class DisplayChannel extends Component {
         this.state = {
             channel_id: '',
             name: '',
+            channel_slug: '',
             description: '',
             members_list: [],
             moderators_list: [],

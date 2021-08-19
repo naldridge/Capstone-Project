@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FiSidebar } from 'react-icons/fi';
+import Sidebar from './Sidebar';
 
 class Communities extends Component {
     constructor(props) {
@@ -24,15 +26,11 @@ class Communities extends Component {
     }
 
     render() {
-        const { name } = this.state;
+        const { channel } = this.state;
 
         return (
-            <div className="DisplayDefaultChannels">
-                {name.map((channel, index) => {
-                    <div key={index}>
-                        {channel.name}
-                    </div>
-                })}
+            <div className="DefaultChannels">
+                {!!channel ? (<Sidebar channel={channel} />) : null}
             </div>
         );
     }
