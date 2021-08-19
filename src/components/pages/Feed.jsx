@@ -3,6 +3,26 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Feed = () => {
+    // like button feature
+    const [likes, setLikes] = useState(0);
+    const [commentLikes, setCommentLikes] = useState(0);
+
+    
+    // comment function
+    const postComment = 'https://localhost:3333/comment/add'
+    const [userComment, setUserComment] = setState(' ');
+    const postComment = () => {
+        axios.post(postComment)
+        .then((response) => {
+            console.log(response)
+            alert('Comment Posted')
+        })
+        .catch((error) => [
+            alert(error)
+        ])
+    }
+
+    // fetch functions
     const [posts, setPosts] = useState([ ]);
     const [comments, setComments] = useState([ ]);
     
@@ -32,7 +52,47 @@ const Feed = () => {
                 {post}
                 <div className="commentContainer">
                     {commentFeedback}
+                    <button
+                    type='button'
+                    onClick={() => {
+                        setCommentLikes(commentLikes++)
+                    }}
+                    >
+                    Like 
+                    </button>
+                    <div>
+                        {commentLikes}
+                    </div>
                 </div>
+                <label htmlFor="postComment">Comment on this post
+                    <input 
+                    type="text"
+                    value={userComment}
+                    onChange={(e) => {setUserComment(e.target.value)}}
+                    />
+                    <button 
+                    type='submit'
+                    onClick={() => {
+                        postComment()
+                    }}
+                    >
+                        Comment
+                    </button>
+                </label>
+                <div className="postLikes">
+                    <button 
+                    type='button'
+                    onClick={() => {
+                        setLikes(likes++)
+                    }}
+                    >
+                    Like This Post
+                    </button>
+                    <div>
+                    {likes}
+                    </div>
+                </div>
+                
             </div>
         )
     }
