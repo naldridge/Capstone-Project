@@ -1,36 +1,18 @@
 import React from "react";
-import {
-  Flex,
-  Text,
-  Icon,
-  Link,
-  Menu,
-  MenuButton,
-  MenuList,
-} from "@chakra-ui/react";
+import { Flex, Text, Icon, Link, Menu, MenuButton } from "@chakra-ui/react";
 
 export default function NavItem({ icon, title, active, navSize }) {
   return (
-    <Flex mt={30} flexDir="column" w="100%">
-      <Menu placement="right">
-        <Link
-          p={3}
-          borderRadius={8}
-          _hover={{ textDecor: "none", backgroundColor: "#9F7AEA" }}
-          w={navSize == "large" && "100%"}
-        >
+    <Flex mt={30} flexDirection="column" w="100%">
+      <Menu>
+        <Link p={5} borderRadius={3} _hover={{ backgroundColor: "#9F7AEA" }}>
           <MenuButton w="100%">
             <Flex>
-              <Icon
-                as={icon}
-                fontSize="xl"
-                color={active ? "#2D3748" : "gray.500"}
-              />
+              <Icon as={icon} fontSize="xl" color="white" />
               <Text ml={5}>{title}</Text>
             </Flex>
           </MenuButton>
         </Link>
-        <MenuList py={0} border="none" w={200} h={200} ml={5}></MenuList>
       </Menu>
     </Flex>
   );
