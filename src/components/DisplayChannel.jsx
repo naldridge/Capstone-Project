@@ -22,7 +22,7 @@ class DisplayChannel extends Component {
         
     }
 
-    _fetchChannel(slug) {
+   async _fetchChannel(slug) {
         const url = `http:localhost:3333/channel/${slug}`;
         const response = await fetch(url).then(response => response.json());
 
