@@ -11,8 +11,9 @@ const Feed = () => {
     // comment function
     const addComment = 'https://localhost:3333/comment/add'
     const [userComment, setUserComment] = setState(' ');
+    
     const postComment = () => {
-        axios.post(addComment, userComment)
+        axios.post(addComment, commentData)
         .then((response) => {
             console.log(response)
             alert('Comment Posted')
@@ -20,6 +21,15 @@ const Feed = () => {
         .catch((error) => [
             alert(error)
         ])
+    }
+
+    // data to insert into table
+    const commentData = {
+        'id': ' ',
+        'channel_id': ' ',
+        'text_content' : userComment,
+        'likes': likes, 
+        'time_stamp': new Date(),
     }
 
     // fetch functions
