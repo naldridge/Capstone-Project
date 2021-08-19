@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { useParams } from 'react-router-dom';
 
 class DisplayChannel extends Component {
     constructor(props) {
@@ -6,11 +7,30 @@ class DisplayChannel extends Component {
         this.state = {
             channel_id: '',
             name: '',
-            channel_slug: '',
             description: '',
             members_list: [],
             moderators_list: [],
         }
+    }
+
+    componentDidMount() {
+        const { slug } = useParams();
+ 
+
+        this._fetchChannel({slug});
+
+        
+    }
+
+    _fetchChannel(slug) {
+        const url = `http:localhost:3333/channel/${slug}`;
+        const response = await fetch(url).then(response => response.json());
+
+        this.setState({
+            channel_id: response.channel_id,
+            name: response.channel_name,
+            description: response.description,
+        })
     }
 
 
