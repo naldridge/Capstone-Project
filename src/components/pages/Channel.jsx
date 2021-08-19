@@ -8,7 +8,7 @@ const Channel = () => {
     .catch(error => alert(error))
   }
   return (
-      
+    
   )
 }
 
