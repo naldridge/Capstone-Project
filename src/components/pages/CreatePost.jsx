@@ -12,12 +12,10 @@ const CreatePost = () => {
     }
 
     const postData = {
-        'id': ' ',
+        'user_id': ' ',
         'channel_id': ' ',
         'title': title,
         'text_content': post,
-        'time_stamp': new Date()
-
     }
 
     return (
@@ -48,3 +46,5 @@ const CreatePost = () => {
         </div>
     )
 }
+
+export default CreatePost;

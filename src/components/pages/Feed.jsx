@@ -56,10 +56,11 @@ const Feed = () => {
         })
     });
 
-    for (const post in posts && commentFeedback in comments) {
+    // may have to replace for loop with while loop. insert arrays into object and map object into container?
+    for (const postFeedback in posts && commentFeedback in comments) {
         return (
             <div className="postContainer">
-                {post}
+                {postFeedback}
                 <div className="commentContainer">
                     {commentFeedback}
                     <button
