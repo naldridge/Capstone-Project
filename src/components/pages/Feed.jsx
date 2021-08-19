@@ -9,10 +9,10 @@ const Feed = () => {
 
     
     // comment function
-    const postComment = 'https://localhost:3333/comment/add'
+    const addComment = 'https://localhost:3333/comment/add'
     const [userComment, setUserComment] = setState(' ');
     const postComment = () => {
-        axios.post(postComment)
+        axios.post(addComment, userComment)
         .then((response) => {
             console.log(response)
             alert('Comment Posted')
