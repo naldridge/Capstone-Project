@@ -10,8 +10,7 @@ export default function Sidebar() {
     <Flex
       position="sticky"
       top={0}
-      h="100vh"
-      background="black"
+      background="#44337a"
       w={200}
       flexDirection="column"
       justifyContent="space-between"

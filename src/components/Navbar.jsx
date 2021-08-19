@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
 import Home from "./Home";
 import { Flex, Heading, Spacer, Box, Button } from "@chakra-ui/react";
 
