@@ -38,28 +38,3 @@
     transform: rotate(360deg);
   }
 }
-
-.homePage h2 {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.homePage .subreaditsSection,
-.homePage .usersSection {
-  margin-left: 2rem;
-}
-
-.leftNav {
-  margin-left: 30px;
-}
-
-.centerNav {
-  align-items: center;
-  margin-left: 620px;
-  margin-right: 380px;
-}
-
-.headerNav {
-  background-color: black;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-}
