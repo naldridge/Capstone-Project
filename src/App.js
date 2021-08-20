@@ -8,14 +8,14 @@ import { Profile } from "./pages/Profile";
 import { Home } from "./pages/Home";
 import { DarkMode } from "./pages/DarkMode";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { NavigationBar } from "./components/Navbar";
+import { NavBar } from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <React.Fragment>
       <Router>
-        <NavigationBar />
+        <NavBar />
         <Sidebar />
         <Switch>
           <Route exact path="/" component={Home} />
