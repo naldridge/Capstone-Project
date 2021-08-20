@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Form, FormControl } from "react-bootstrap";
+import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -22,7 +22,7 @@ const Styles = styled.div`
   }
   .navbar-brand {
     padding: 30px;
-    font-size: 2em;
+    font-size: 2.25em;
     color: black;
     &:hover {
       color: white;
@@ -30,12 +30,12 @@ const Styles = styled.div`
   }
   .form-center {
     position: absolute !important;
-    left: 35%;
-    right: 55%;
+    left: 85%;
+    right: 5%;
   }
 `;
 
-export const NavigationBar = () => (
+export const NavBar = () => (
   <Styles>
     <Navbar expand="lg">
       <Navbar.Brand href="/">FETCH-DEV()</Navbar.Brand>
@@ -47,7 +47,7 @@ export const NavigationBar = () => (
       <Nav className="ml-auto">
         <Nav.Item>
           <Nav.Link href="/">Home</Nav.Link>
-        </Nav.Item>
+        </Nav.Item>{" "}
         <Nav.Item>
           <Nav.Link href="/about">About</Nav.Link>
         </Nav.Item>
@@ -57,9 +57,14 @@ export const NavigationBar = () => (
         <Nav.Item>
           <Nav.Link href="/profile">Profile</Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/community">Community</Nav.Link>
+        </Nav.Item>
+        <Button variant="primary">Primary</Button>{" "}
+        <Button variant="primary">Primary</Button>
       </Nav>
     </Navbar>
   </Styles>
 );
 
-export default NavigationBar;
+export default NavBar;
