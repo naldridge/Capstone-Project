@@ -1,17 +1,61 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #a01a58;
+}
+
+.home,
+.channels {
+  display: flex;
+  color: #723c70;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.about-the-team {
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #455e89;
+  font-size: 100px;
+}
+
+.sign-up {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #0091ad;
+  font-size: 100px;
+}
+
+.homePage h2 {
+  margin-top: 2rem;
   text-align: center;
   background-color: #44337a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homePage .subreaditsSection,
+.homePage .usersSection {
+  margin-left: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-container {
+  margin: 0 auto;
+  margin-top: 150px;
+  padding-top: 0px;
+  width: 800px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 0 30px 30px 0;
+  position: relative;
+  background: rgba(10, 57, 107, 0.274);
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 30px 30px 30px 30px;
 }
 
 /* .App-header {
@@ -19,34 +63,98 @@
   min-height: 10vh;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: left;
 } */
 
-.App-link {
-  color: #61dafb;
+.form h1 {
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-inputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
 }
 
-.homePage h2 {
-  margin-top: 2rem;
+.form-inputs p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: black;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 8px;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #595959;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: blue;
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+  transition: all 0.4s ease-out;
+}
+
+.form-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: black;
+  width: 80%;
   text-align: center;
 }
 
-.homePage .subreaditsSection,
-.homePage .usersSection {
-  margin-left: 2rem;
+.form-input-login a {
+  text-decoration: none;
+  color: blue;
+  font-weight: 600;
+}
+
+.loginButton {
+  width: 15px;
+  height: 15px;
+}
+
+.profilePage {
+  margin: auto;
+  justify-content: center;
+  display: inline;
 }
 
 .leftNav {
