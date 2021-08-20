@@ -20,6 +20,7 @@ class Communities extends Component {
         const response = await fetch(url).then(response => response.json());
 
         const defaultChannels = response;
+        console.log("default channels: ", defaultChannels);
 
         this.setState({
             channel: [defaultChannels]
