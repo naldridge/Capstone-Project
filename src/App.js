@@ -23,13 +23,13 @@ import Sidebar from "./components/Sidebar";
 import DisplayChannel from "./components/DisplayChannel";
 // import HomePage from "./components/Homepage";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useAuth0 } from "@auth0/auth0-react";
+
 
 function App() {
-  const { isLoading } = useAuth0();
+ /*  const { isLoading } = useAuth0();
   const stream = React.Component;
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>; */
 
   return (
     <div>

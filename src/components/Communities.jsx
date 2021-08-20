@@ -12,6 +12,7 @@ class Communities extends Component {
 
     componentDidMount() {
         this._fetchDefaultChannels();
+        console.log("state: ", this.state.channel);
     }
 
     async _fetchDefaultChannels() {
