@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
@@ -17,9 +16,9 @@ const theme = extendTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
+    <BrowserRouter>
       <App />
-    </ChakraProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
