@@ -30,7 +30,7 @@ class Communities extends Component {
 
         return (
             <div className="DefaultChannels">
-                {!!channel ? (<Sidebar channel={channel} />) : null}
+                {!!channel.length > 0 ? (<Sidebar channel={channel} />) : null}
             </div>
         );
     }

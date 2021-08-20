@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from 'react-router-dom';
 import {
@@ -24,34 +21,27 @@ import {
 } from "react-icons/fi";
 import { IoPawOutline } from "react-icons/io5";
 import NavItem from "./NavItem";
-import DisplayChannel from "./DisplayChannel";
 
-function showDefaultChannels(props) {
-  const { channel } = props.channel;
+function showDefaultChannels(channel) {
 
   return (
     <ul className="defaultChannelsList">
-      <Router>
+     
         {
           channel.map((data, index) => {
             return (<li key={index}>
               <Link to={`/channel/${data.slug}`}>{data.name}</Link>
-              <Switch>
-                <Route path={`/channel/:${data.slug}`}>
-                  <DisplayChannel />
-                </Route>
-              </Switch>
             </li>
             )
           })
         }
-
-      </Router>
+ 
     </ul>
   )
 }
 
-export default function Sidebar() {
+export default function Sidebar(props) {
+  console.log(props);
   const [navSize, changeNavSize] = useState("large");
   return (
     <Flex
@@ -80,7 +70,7 @@ export default function Sidebar() {
         />
         <NavItem navSize={navSize} icon={FiCalendar} title="Explore" active />
         <NavItem navSize={navSize} icon={FiUser} title="Communities">
-          {showDefaultChannels()}
+          {props.channel !== null ? showDefaultChannels(props.channel) : (null)}
         </NavItem>
         <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
       </Flex>
