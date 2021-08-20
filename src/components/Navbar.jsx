@@ -1,5 +1,12 @@
 import React from "react";
-import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
+import {
+  Nav,
+  Navbar,
+  Form,
+  FormControl,
+  DropdownButton,
+  Dropdown,
+} from "react-bootstrap";
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -40,6 +47,11 @@ export const NavBar = () => (
     <Navbar expand="lg">
       <Navbar.Brand href="/">FETCH-DEV()</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <DropdownButton id="dropdown-basic-button" title="Home">
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </DropdownButton>
       <Form className="form-center">
         <FormControl type="text" placeholder="Search" className="" />
       </Form>
@@ -51,17 +63,15 @@ export const NavBar = () => (
         <Nav.Item>
           <Nav.Link href="/about">About</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        {/* <Nav.Item>
           <Nav.Link href="/darkMode">Dark Mode</Nav.Link>
-        </Nav.Item>
+        </Nav.Item> */}
         <Nav.Item>
           <Nav.Link href="/profile">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/community">Community</Nav.Link>
         </Nav.Item>
-        <Button variant="primary">Primary</Button>{" "}
-        <Button variant="primary">Primary</Button>
       </Nav>
     </Navbar>
   </Styles>
