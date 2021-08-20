@@ -1,4 +1,9 @@
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 import React from "react";
 // import Auth0ProviderWithHistory from "./components/auth0Provider";
 import LoginButton from "./components/LoginButton";
@@ -13,13 +18,12 @@ import {
   LikeButton,
 } from "react-activity-feed";
 import "react-activity-feed/dist/index.css";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import Channel from "./components/pages/Channel";
+import Sidebar from "./components/Sidebar";
+import DisplayChannel from "./components/DisplayChannel";
+// import HomePage from "./components/Homepage";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -28,7 +32,7 @@ function App() {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <>
+    <div>
       <StreamApp
         apiKey="dz5f4d5kzrue"
         appId="102254"
@@ -59,10 +63,18 @@ function App() {
       {/* </Auth0ProviderWithHistory> */}
       <Router>
         <Navbar />
-        <Home />
-        <Footer />
+        <Switch>
+          <Route path={`/channel/:slug`}>
+            <DisplayChannel />
+          </Route>
+        </Switch>
       </Router>
-    </>
+
+      <Sidebar channel={null} />
+
+
+      {/* <HomePage /> */}
+    </div>
   );
 }
 

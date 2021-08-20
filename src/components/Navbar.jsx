@@ -1,64 +1,69 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
-import Button from "./Button";
-import Channel from "./pages/Channel";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
+import Home from "./Home";
+import { Flex, Heading, Spacer, Box, Button } from "@chakra-ui/react";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
-
+const Navbar = () => {
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            DevHacks
-          </Link>
-          <div className="menu-icon" onClick={handleClick}></div>
-        </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to="/" className="nav=links" onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="./components/pages/Channel"
-              className="nav=links"
-              onClick={closeMobileMenu}
-            >
-              Channel
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav=links" onClick={closeMobileMenu}>
-              About the Team
-            </Link>
-          </li>
-        </ul>
-        <Button>Sign Up</Button>
-      </nav>
-    </>
+    // <div className="navbar">
+    //   <Router>
+    //     <div className="leftNav">
+    //       <Nav className="justify-content-start" activeKey="/home">
+    //         <Nav.Item>
+    //           <Nav.Link href="/home">[ NAME ]</Nav.Link>
+    //         </Nav.Item>
+    //       </Nav>
+    //     </div>
+    //     <div className="centerNav">
+    //       <Nav className="justify-content-center" activeKey="/home">
+    //         <Nav.Item>
+    //           <Nav.Link href="/home">Explore</Nav.Link>
+    //         </Nav.Item>
+    //         <Nav.Item>
+    //           <Nav.Link eventKey="link-1">Forums</Nav.Link>
+    //         </Nav.Item>
+    //         <Nav.Item>
+    //           <Nav.Link eventKey="link-2">Communities</Nav.Link>
+    //         </Nav.Item>
+    //       </Nav>
+    //     </div>
+    //     <div className="rightNav">
+    //       <Nav className="justify-content-end" activeKey="/home">
+    //         <Nav.Item>
+    //           <Nav.Link href="/home">Log In</Nav.Link>
+    //         </Nav.Item>
+    //         <Nav.Item>
+    //           <Nav.Link eventKey="link-1">Sign Up</Nav.Link>
+    //         </Nav.Item>
+    //         <Nav.Item>
+    //           <Nav.Link eventKey="link-2">About The Team</Nav.Link>
+    //         </Nav.Item>
+    //       </Nav>
+    //     </div>
+    //     <Switch>
+    //       <Route exact path="/">
+    //         <Home />
+    //       </Route>
+    //     </Switch>
+    //   </Router>
+    // </div>
+    <Flex p="2">
+      <Box p="4">
+        <Heading size="md" ml="8">
+          fetch-dev()
+        </Heading>
+      </Box>
+      <Spacer />
+      <Box>
+        <Button colorScheme="purple" mr="5">
+          Sign Up
+        </Button>
+        <Button colorScheme="purple" mr="4">
+          Log in
+        </Button>
+      </Box>
+    </Flex>
   );
-}
+};
 
 export default Navbar;
