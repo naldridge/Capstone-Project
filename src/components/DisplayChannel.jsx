@@ -14,15 +14,21 @@ class DisplayChannel extends Component {
     }
 
     componentDidMount() {
-        const { slug } = this.props.match.params.slug;
- 
-        this._fetchChannel({slug});
+        const  slug  = this.props.match.params.slug;
+        this._fetchChannel(slug);
+        
+
 
         }
 
    async _fetchChannel(slug) {
-        const url = `http:localhost:3333/channel/${slug}`;
+
+        const url = `http://localhost:3333/channel/${slug}`;
+        console.log("url: ", url);
         const response = await fetch(url).then(response => response.json());
+
+        console.log("response", response);
+        
 
         this.setState({
             channel_id: response.channel_id,
