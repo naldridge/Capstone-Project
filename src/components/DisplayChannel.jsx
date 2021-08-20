@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { useParams } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class DisplayChannel extends Component {
     constructor(props) {
@@ -14,13 +14,11 @@ class DisplayChannel extends Component {
     }
 
     componentDidMount() {
-        const { slug } = useParams();
+        const { slug } = this.props.match.params.slug;
  
-
         this._fetchChannel({slug});
 
-        
-    }
+        }
 
    async _fetchChannel(slug) {
         const url = `http:localhost:3333/channel/${slug}`;
@@ -62,4 +60,4 @@ class DisplayChannel extends Component {
     }
 }
 
-export default DisplayChannel;
+export default withRouter(DisplayChannel);

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { 
-  BrowserRouter as Router, 
-  Switch, 
-  Route, 
-  Link 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
 } from 'react-router-dom';
 import {
   Flex,
@@ -26,24 +26,26 @@ import { IoPawOutline } from "react-icons/io5";
 import NavItem from "./NavItem";
 import DisplayChannel from "./DisplayChannel";
 
-function showDefaultChannels() {
-  const { channel } = this.props;
+function showDefaultChannels(props) {
+  const { channel } = props.channel;
 
   return (
     <ul className="defaultChannelsList">
       <Router>
-      {
-        channel.map((data, index) => {
-          return (<li key={index}>
-            <Link to={`/channel/${data.slug}`}>{data.name}</Link>
-          </li>)
-        })
-      }
-        <Switch>
-          <Route path={`/channel/:${data.slug}`}>
-            <DisplayChannel />
-          </Route>
-        </Switch>
+        {
+          channel.map((data, index) => {
+            return (<li key={index}>
+              <Link to={`/channel/${data.slug}`}>{data.name}</Link>
+              <Switch>
+                <Route path={`/channel/:${data.slug}`}>
+                  <DisplayChannel />
+                </Route>
+              </Switch>
+            </li>
+            )
+          })
+        }
+
       </Router>
     </ul>
   )
