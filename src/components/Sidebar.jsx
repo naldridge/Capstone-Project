@@ -1,43 +1,21 @@
 import React, { useState } from "react";
-import {
-  Link
-} from 'react-router-dom';
-import {
-  Flex,
-  Text,
-  IconButton,
-  Divider,
-  Avatar,
-  Heading,
-} from "@chakra-ui/react";
-import {
-  FiMenu,
-  FiHome,
-  FiCalendar,
-  FiUser,
-  FiDollarSign,
-  FiBriefcase,
-  FiSettings,
-} from "react-icons/fi";
-import { IoPawOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { Flex, Divider, Heading } from "@chakra-ui/react";
+import { FiHome, FiUser, FiSunrise } from "react-icons/fi";
 import NavItem from "./NavItem";
 
 function showDefaultChannels(channel) {
-
   return (
     <ul className="defaultChannelsList">
-     
-        {
-          channel.map((data, index) => {
-            return (<li key={index}>
-              <Link to={`/channel/${data.slug}`}>{data.name}</Link>
-            </li>
-            )
-          })
-        }
- 
+      {channel.map((data, index) => {
+        return (
+          <li key={index}>
+            <Link to={`/channel/${data.slug}`}>{data.name}</Link>
+          </li>
+        );
+      })}
     </ul>
-  )
+  );
 }
 
 export default function Sidebar(props) {
@@ -46,10 +24,10 @@ export default function Sidebar(props) {
   return (
     <Flex
       pos="sticky"
-      left="5"
+      left="1"
       h="70vh"
       marginTop="2.5vh"
-      boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
+      // boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
       borderRadius={navSize === "small" ? "15px" : "30px"}
       w={navSize === "small" ? "75px" : "200px"}
       flexDir="column"
@@ -67,12 +45,13 @@ export default function Sidebar(props) {
           icon={FiHome}
           title="Dashboard"
           description="This is the description for the dashboard."
-        />
-        <NavItem navSize={navSize} icon={FiCalendar} title="Explore" active />
-        <NavItem navSize={navSize} icon={FiUser} title="Communities">
-          {props.channel !== null ? showDefaultChannels(props.channel) : (null)}
+        >
+          {props.channel !== null ? showDefaultChannels(props.channel) : null}
         </NavItem>
-        <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
+
+        <NavItem navSize={navSize} icon={FiSunrise} title="Explore" />
+        <NavItem navSize={navSize} icon={FiUser} title="Communities"></NavItem>
+        <NavItem navSize={navSize} icon={FiUser} title="Profile" />
       </Flex>
 
       <Flex
@@ -83,15 +62,14 @@ export default function Sidebar(props) {
         mb={4}
       >
         <Divider display={navSize === "small" ? "none" : "flex"} />
-        <Flex mt={4} align="center">
-          <Avatar size="sm" src="avatar-1.jpg" />
+        <Flex mt={1} align="center">
           <Flex
             flexDir="column"
-            ml={4}
+            ml={6}
             display={navSize === "small" ? "none" : "flex"}
           >
             <Heading as="h3" size="sm">
-              David Vasek
+              <NavItem navSize={navSize} icon={FiUser} title="Profile" />
             </Heading>
           </Flex>
         </Flex>
