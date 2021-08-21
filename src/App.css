@@ -2,7 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #a01a58;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBar {
+  width: 20%;
+}
+
+.mainContainer {
+  width: 80%;
+  margin-top: 30px;
 }
 
 .home,
