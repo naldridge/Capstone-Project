@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Flex, Divider, Heading } from "@chakra-ui/react";
-import { FiHome, FiUser, FiSunrise } from "react-icons/fi";
+import { FiHome, FiUser, FiSunrise, FiStar, FiBookOpen } from "react-icons/fi";
 import NavItem from "./NavItem";
 
 function showDefaultChannels(channel) {
@@ -20,7 +20,7 @@ function showDefaultChannels(channel) {
 
 export default function Sidebar(props) {
   console.log(props);
-  const [navSize, changeNavSize] = useState("large");
+
   return (
     <Flex
       pos="sticky"
@@ -28,48 +28,27 @@ export default function Sidebar(props) {
       h="70vh"
       marginTop="2.5vh"
       // boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
-      borderRadius={navSize === "small" ? "15px" : "30px"}
-      w={navSize === "small" ? "75px" : "200px"}
+      borderRadius="30px"
+      w="200px"
       flexDir="column"
       justifyContent="space-between"
     >
-      <Flex
-        p="5%"
-        flexDir="column"
-        w="80%"
-        alignItems={navSize === "small" ? "center" : "flex-start"}
-        as="nav"
-      >
-        <NavItem
-          navSize={navSize}
-          icon={FiHome}
-          title="Dashboard"
-          description="This is the description for the dashboard."
-        >
+      <Flex p="5%" flexDir="column" w="80%" as="nav">
+        <NavItem icon={FiHome} title="Dashboard">
           {props.channel !== null ? showDefaultChannels(props.channel) : null}
         </NavItem>
 
-        <NavItem navSize={navSize} icon={FiSunrise} title="Explore" />
-        <NavItem navSize={navSize} icon={FiUser} title="Communities"></NavItem>
-        <NavItem navSize={navSize} icon={FiUser} title="Profile" />
+        <NavItem icon={FiSunrise} title="Explore" />
+        <NavItem icon={FiBookOpen} title="Communities"></NavItem>
+        <NavItem icon={FiStar} title="About" />
       </Flex>
 
-      <Flex
-        p="5%"
-        flexDir="column"
-        w="100%"
-        alignItems={navSize === "small" ? "center" : "flex-start"}
-        mb={4}
-      >
-        <Divider display={navSize === "small" ? "none" : "flex"} />
+      <Flex p="5%" flexDir="column" w="100%" alignItems="flex-start" mb={10}>
+        <Divider display="flex" />
         <Flex mt={1} align="center">
-          <Flex
-            flexDir="column"
-            ml={6}
-            display={navSize === "small" ? "none" : "flex"}
-          >
+          <Flex flexDir="column" ml={0} display="flex">
             <Heading as="h3" size="sm">
-              <NavItem navSize={navSize} icon={FiUser} title="Profile" />
+              <NavItem icon={FiUser} title="Profile" />
             </Heading>
           </Flex>
         </Flex>
