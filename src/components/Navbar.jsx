@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Home from "./Home";
 import { Flex, Heading, Spacer, Box, Button } from "@chakra-ui/react";
+import { FiSun } from "react-icons/fi";
+import NavItem from "./NavItem";
 
 const Navbar = () => {
   return (
@@ -47,18 +49,19 @@ const Navbar = () => {
     //     </Switch>
     //   </Router>
     // </div>
-    <Flex p="2">
-      <Box p="4">
-        <Heading size="md" ml="8">
+    <Flex p="5">
+      <Box p="2">
+        <Heading size="lg" ml="12">
           fetch-dev()
         </Heading>
       </Box>
       <Spacer />
+
       <Box>
-        <Button colorScheme="purple" mr="5">
+        <Button colorScheme="linkedin" mr="5">
           Sign Up
         </Button>
-        <Button colorScheme="purple" mr="4">
+        <Button colorScheme="linkedin" mr="4">
           Log in
         </Button>
       </Box>
