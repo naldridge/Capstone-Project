@@ -21,6 +21,7 @@ import HomePage from "./components/Homepage";
 import Communities from "./components/Communities";
 import Login from "./components/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
+import About from "./components/About";
 
 function App() {
   /*  const { isLoading } = useAuth0();
@@ -43,6 +44,7 @@ function App() {
               <Route path={`/login`} component={Login} />
               <Route path={`/channel/:slug`} component={DisplayChannel} />
               <Route path={`/profile`} component={Profile} />
+              <Route path={`/about`} component={About} />
             </Switch>
           </div>
         </div>
