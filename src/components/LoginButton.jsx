@@ -1,11 +1,19 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from "react-bootstrap";
 
 const LoginButton = () => {
-  const { loginWithPopup, isAuthenticated } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
 
   return (
-    !isAuthenticated && <button onClick={() => loginWithPopup()}>Log In</button>
+    <Button
+      onClick={() => loginWithRedirect()}
+      id="qsloginBtn"
+      variant="secondary"
+      className="btn-margin"
+    >
+      Log In
+    </Button>
   );
 };
 

@@ -7,12 +7,17 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
-      <div className="profilePage">
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <p>Profile page!!!!!</p>
-        <JSONPretty data={user} />
+      <div className="mainProfile">
+        <div className="profilePage">
+          <div className="profileLogo">
+            <img src={user.picture} alt={user.name} />
+          </div>
+
+          <h2>{user.name}</h2>
+          <p>{user.email}</p>
+          <p>Profile page!!!!!</p>
+          <JSONPretty data={user} />
+        </div>
       </div>
     )
   );

@@ -1,14 +1,16 @@
 import React from "react";
 import { Flex, Text, Icon, Link, Menu, MenuButton } from "@chakra-ui/react";
+import { Link as ReachLink } from "@reach/router";
 
-export default function NavItem({ icon, title }) {
+export default function NavItem({ icon, title, NavSpot }) {
   return (
     <Flex mt={38} flexDir="column" w="100%">
       <Menu placement="right">
         <Link
+          href={NavSpot}
           p={2}
           borderRadius={10}
-          _hover={{ textDecor: "none", backgroundColor: "lightblue" }}
+          _hover={{ textDecor: "none", backgroundColor: "#718096" }}
           w="100%"
         >
           <MenuButton w="100%">
