@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Text, Icon, Link, Menu, MenuButton } from "@chakra-ui/react";
-import { Link as ReachLink } from "@reach/router";
+//import { Link as ReachLink } from "@reach/router";
 
 export default function NavItem({ icon, title, NavSpot }) {
   return (

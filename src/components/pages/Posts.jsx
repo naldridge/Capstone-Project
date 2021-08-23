@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Comments from './Comments';
 
+
 const Posts = () => {
 
     const [likes, setLikes] = useState(0);
@@ -39,9 +40,11 @@ const Posts = () => {
                     {likes}
                     </div>
                 </div>
+
                 <div className="comments">
                     <Comments />
                 </div>
+
             </div>
         )
     }
