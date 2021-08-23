@@ -10,9 +10,10 @@ const Profile = () => {
     isAuthenticated && (
       <div className="mainProfile">
         <div className="profileSide">
-          <div className="profileLogo">
+          <div className="profileLogo" align="center">
             <img src={user.picture} alt={user.name} />
-            <div>{user.name}</div>
+            <div>David Vasek</div>
+            <p></p>
             <div>Web Developer</div>
           </div>
         </div>
