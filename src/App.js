@@ -5,7 +5,7 @@ import React from "react";
 import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
-import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   StreamApp,
   NotificationDropdown,
@@ -22,6 +22,7 @@ import Communities from "./components/Communities";
 import Login from "./components/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
   /*  const { isLoading } = useAuth0();
@@ -48,6 +49,7 @@ function App() {
             </Switch>
           </div>
         </div>
+        {/* <Footer /> */}
       </Router>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Card } from "react-bootstrap";
 import React from "react";
-import { Heading, Box, Text, Button, Spacer } from "@chakra-ui/react";
+import { Heading, Box, Text, Button, Spacer, Divider } from "@chakra-ui/react";
+import Footer from "./Footer";
 
 const HomePage = () => {
   return (
@@ -25,6 +26,7 @@ const HomePage = () => {
             mr="5"
             ml={200}
             mt={10}
+            href="https://dev-ezawyn6e.us.auth0.com/u/signup?state=hKFo2SBsemIxY0VKa2p3UnpqWEwxWE83ZDJ1LUN1LVhfX3FOMqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIE1yTDlFUFo2Zm5EeXVRcHdtYmdJRG9XVmJKd09yR2NUo2NpZNkgVFZrZ3ZBMUhWREFLazZkNWlsdjBGTjJQamU0ZVFvTmk"
           >
             Create a free account
           </Button>
@@ -35,12 +37,13 @@ const HomePage = () => {
             <Card.Body className="text-center">
               <Card.Title>Communities</Card.Title>
 
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Subtitle className="mb-2 text">
+                Browse through different communities that spark your interest.
+                Not finding a specific community? Create your own community and
+                other like-minded people can join and contribute!
+              </Card.Subtitle>
+
+              <Card.Link href="/communities active"></Card.Link>
             </Card.Body>
           </Card>
           <Card className="signUpCard" style={{ width: "30rem" }}>
@@ -49,18 +52,18 @@ const HomePage = () => {
                 Check out some of these featured communities!
               </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                Card Subtitle
+                <Card.Link href="#">Another Link</Card.Link>
               </Card.Subtitle>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
+              <Card.Text></Card.Text>
               <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
               <Card.Link href="#">Another Link</Card.Link>
             </Card.Body>
           </Card>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

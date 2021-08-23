@@ -1,24 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import { Divider } from "@chakra-ui/react";
 function Footer() {
   return (
-    <div className="footer-container">
-      <section className="footer">
-        <div className="imput-areas">
-          <form>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="footer-input"
-            />
-          </form>
-          <div>
-            <Link>About the Team</Link>
+    <div>
+      <div className="footer-container">
+        <section className="footer">
+          <Divider display="flex" />
+          <div className="imput-areas">
+            <div>
+              <Link>GitHub</Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
