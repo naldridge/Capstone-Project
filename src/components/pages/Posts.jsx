@@ -1,10 +1,10 @@
 import axios from 'axios';
 import Comments from './Comments';
+import { useState, useEffect } from 'react';
+import LikeButton from './LikeButton';
 
 
 const Posts = () => {
-
-    const [likes, setLikes] = useState(0);
     const [posts, setPosts] = useState([ ]);
     const getPosts = 'https://localhost:3333/post/showposts';
 
@@ -18,6 +18,18 @@ const Posts = () => {
         })
     });
 
+    const likeObject = {
+        'likes': useState(<LikeButton likes={this.likes} />)
+    }
+    const postLikecount = 'https://localhost:3333/add'
+    useEffect(() => {
+        axios.post(postLikecount, likeObject)
+        .then(
+            alert('You liked This Post')
+        )
+        .catch(error => alert(error))
+    })
+ 
     for (const postFeedback in posts) {
         return (
             <div className="postContainer">
@@ -28,17 +40,7 @@ const Posts = () => {
                 {postFeedback.text_content}
                 </div>
                 <div className="postLikes">
-                    <button 
-                    type='button'
-                    onClick={() => {
-                        setLikes(likes++)
-                    }}
-                    >
-                    Like This Post
-                    </button>
-                    <div>
-                    {likes}
-                    </div>
+                    <LikeButton />
                 </div>
 
                 <div className="comments">
