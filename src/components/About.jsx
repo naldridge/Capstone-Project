@@ -28,8 +28,8 @@ const About = () => {
             />
             <Card.Body>
               <Card.Title className="text-center">David Vasek</Card.Title>
-              <Card.Text>
-                Aspiring Full-Stack Developer and Student at DigitalCrafts
+              <Card.Text className="text-center">
+                Full-Stack Developer and tech enthusiast. Based in Houston
               </Card.Text>
             </Card.Body>
             {/* <ListGroup className="list-group-flush">
@@ -53,7 +53,7 @@ const About = () => {
             />
             <Card.Body>
               <Card.Title className="text-center">Brittany Fisher</Card.Title>
-              <Card.Text>
+              <Card.Text className="text-center">
                 A passionate Full-Stack Developer based in Atlanta{" "}
               </Card.Text>
             </Card.Body>
@@ -80,11 +80,9 @@ const About = () => {
             />
             <Card.Body>
               <Card.Title className="text-center">Nick Aldridge</Card.Title>
-              <Card.Text>
-                I'm Nick. I'm a developer currently studying in the
-                DigitalCrafts Full-Stack Developer Bootcamp. I welcome any
-                opportunities for collaboration or notes on the projects in my
-                repositories.
+              <Card.Text className="text-center">
+                I'm a developer currently studying in the DigitalCrafts
+                Full-Stack Developer Bootcamp
               </Card.Text>
             </Card.Body>
             {/* <ListGroup className="list-group-flush">
@@ -108,9 +106,9 @@ const About = () => {
               <Card.Title className="text-center">
                 Immanuel Alexander
               </Card.Title>
-              <Card.Text>
+              <Card.Text className="text-center">
                 Full stack web developer starting a career in JS development.
-                Follow my journey line for line.{" "}
+                Follow my journey line for line
               </Card.Text>
             </Card.Body>
             {/* <ListGroup className="list-group-flush">
