@@ -39,7 +39,7 @@ export default function Sidebar(props) {
 
         <NavItem NavSpot="/explore" icon={FiSunrise} title="Explore" />
         <NavItem
-          NavSpot="communities"
+          NavSpot="/communities"
           icon={FiBookOpen}
           title="Communities"
         ></NavItem>
