@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { withRouter } from 'react-router';
+import Posts from './pages/Posts';
+import CreatePost from './pages/CreatePost';
 
 class DisplayChannel extends Component {
     constructor(props) {
@@ -55,10 +57,14 @@ class DisplayChannel extends Component {
                 <div className="ModsList">
                     {/* map through moderators_list array */}
                 </div>
+                <div className="createPost">
+                    <CreatePost />
+                </div>
                 <div className="PostsDisplay">
                     <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
                     <div className="ShowPosts">
                         {/* Map through Posts */}
+                        <Posts />
                     </div>
                 </div>
             </div>
