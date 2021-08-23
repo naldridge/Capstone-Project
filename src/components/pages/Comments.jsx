@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import LikeButton from './LikeButton';
 
 const Comments = () => {
     const getComments = 'http://localhost:3333/comment/show_comments'
     const addComment = 'http://localhost:3333/comment/add'
     const [userComment, setUserComment] = useState(' ');
-    const [commentLikes, setCommentLikes] = useState(0)
     const [comment, setComment] = useState([ ])
     
     const postComment = () => {
@@ -24,7 +24,7 @@ const Comments = () => {
         'id': ' ',
         'channel_id': ' ',
         'text_content' : userComment,
-        'likes': likes, 
+        'likes': useState(<LikeButton likes={this.likes} />), 
         'time_stamp': new Date(),
     }
 
@@ -61,16 +61,7 @@ const Comments = () => {
                 </label>
             </div>
             <div className="likeButton">
-                <div className="likes">
-                    {commentLikes}
-                </div>
-                <button
-                type='button'
-                onClick={setCommentLikes(likes++)}
-                >
-                Like
-                </button>
-                
+                <LikeButton />
             </div>
         </div>
     )}

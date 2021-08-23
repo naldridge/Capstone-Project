@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { withRouter } from 'react-router';
+import Posts from './pages/Posts';
+import CreatePost from './pages/CreatePost';
 
 
 class DisplayChannel extends Component {
@@ -53,16 +55,14 @@ class DisplayChannel extends Component {
                 <div className="ModsList">
                     {/* map through moderators_list array */}
                 </div>
-
+                <div className="createPost">
+                    <CreatePost />
+                </div>
                 <div className="PostsDisplay">
-                    <div className="postTitle">This Is The Title</div>
-                    <div className="postBody">
-                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                        quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                    <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
+                    <div className="ShowPosts">
+                        {/* Map through Posts */}
+                        <Posts />
                     </div>
                     <div className="postComments">4 comments</div>
                 </div>
