@@ -58,8 +58,88 @@ class Communities extends Component {
             />
             <input className="submitComment" type="submit" value="comment" />
           </form>
+
+          <div className="mainDisplay">
+            <div className="communityName">
+              [Name of Community] Posted by [User] 2 months ago
+            </div>
+
+            <div className="postTitle"> This is the Title</div>
+            <div className="postBody">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+              mollitia ut obcaecati? Reprehenderit minima iste error eaque
+              repudiandae nobis, architecto provident corporis voluptatem
+              nesciunt facilis qui iure impedit numquam consectetur.
+            </div>
+          </div>
+          <div className="postComments"> 8 comments</div>
+          <div className="commentDisplay">
+            <div className="commentorTitle">Comment as bri</div>
+            <form className="commentForm">
+              <textarea
+                className="commentInput"
+                type="text"
+                placeholder="What are your thoughts"
+              />
+              <input className="submitComment" type="submit" value="comment" />
+            </form>
+
+            <div className="mainDisplay">
+              <div className="communityName">
+                [Name of Community] Posted by [User] 12 days ago
+              </div>
+
+              <div className="postTitle"> This is the Title</div>
+              <div className="postBody">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas asperiores, corporis saepe, enim quod magnam blanditiis
+                consectetur earum fugiat pariatur ipsam quae nulla beatae?
+                Inventore excepturi numquam repellendus temporibus magnam.
+              </div>
+            </div>
+          </div>
+          <div className="postComments">2 Comments</div>
+          <div className="commentDisplay">
+            <div className="commentorTitle">Comment as immanuel</div>
+            <form className="commentsForm">
+              <textarea
+                className="commentInput"
+                type="text"
+                placeholder="What are your thoughts"
+              />
+              <input className="submitComment" type="submit" value="comment" />
+            </form>
+            <div className="mainDisplay">
+              <div className="communityName">
+                [Name of Community Posted by [User] 1 day ago]
+              </div>
+
+              <div className="postTitle">This is the Title</div>
+              <div className="postBody">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
+                maiores nesciunt excepturi accusamus error, enim rerum dolor
+                temporibus fugit voluptatibus aut voluptatum perferendis
+                dolores. Deleniti debitis at distinctio. Doloribus, provident.
+              </div>
+            </div>
+            <div className="postComments"> 3 comments</div>
+            <div className="commentDisplay">
+              <div className="commentorTitle">Comment as nick</div>
+              <form className="commentForm">
+                <textarea
+                  className="commentInput"
+                  type="text"
+                  placeholder="What are your thoughts"
+                />
+                <input
+                  className="submitComment"
+                  type="submit"
+                  value="comment"
+                />
+              </form>
+            </div>
+          </div>
         </div>
-        {/* {!!channel.length > 0 ? (<Sidebar channel={channel} />) : null} */}
       </div>
     );
   }
