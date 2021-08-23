@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Communities.css";
+import CreateCommunityButton from "./CreateCommunityButton";
 
 class Communities extends Component {
   constructor(props) {
@@ -34,17 +35,9 @@ class Communities extends Component {
     console.log("channel: ", channel, Array.isArray(channel));
 
     return (
-      <div className="ChannelsContainer">
-        <div className="AllChannels">
-          {channel.length > 0 ? (
-            <ul>
-              {channel.map((page, index) => (
-                <li className="channelItem" key={index}>
-                  <Link to={`/channel/${page.slug}`}>{page.channel_name}</Link>
-                </li>
-              ))}
-            </ul>
-          ) : null}
+      <>
+        <div>
+          <CreateCommunityButton />
         </div>
         <div className="DefaultChannels">
           <div className="mainDisplay">
@@ -75,94 +68,7 @@ class Communities extends Component {
             </form>
           </div>
         </div>
-        <div className="channelItem">
-          <div className="mainDisplay">
-            <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
-            </div>
-            <div className="postTitle">This Is The Title</div>
-            <div className="postBody">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est,
-            </div>
-            <div className="postComments">4 comments</div>
-          </div>
-          <div className="commentDisplay">
-            <div className="commentorTitle">Comment as davey</div>
-            <form className="commentForm">
-              <textarea
-                className="commentInput"
-                type="text"
-                placeholder="what are your thoughts"
-              />
-              <input className="submitComment" type="submit" value="comment" />
-            </form>
-          </div>
-        </div>
-        <div className="channelItem">
-          <div className="mainDisplay">
-            <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
-            </div>
-            <div className="postTitle">This Is The Title</div>
-            <div className="postBody">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est,
-            </div>
-            <div className="postComments">4 comments</div>
-          </div>
-          <div className="commentDisplay">
-            <div className="commentorTitle">Comment as davey</div>
-            <form className="commentForm">
-              <textarea
-                className="commentInput"
-                type="text"
-                placeholder="what are your thoughts"
-              />
-              <input className="submitComment" type="submit" value="comment" />
-            </form>
-          </div>
-        </div>
-        <div className="channelItem">
-          <div className="mainDisplay">
-            <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
-            </div>
-            <div className="postTitle">This Is The Title</div>
-            <div className="postBody">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est,
-            </div>
-            <div className="postComments">4 comments</div>
-          </div>
-          <div className="commentDisplay">
-            <div className="commentorTitle">Comment as davey</div>
-            <form className="commentForm">
-              <textarea
-                className="commentInput"
-                type="text"
-                placeholder="what are your thoughts"
-              />
-              <input className="submitComment" type="submit" value="comment" />
-            </form>
-          </div>
-        </div>
-      </div>
+      </>
     );
   }
 }
