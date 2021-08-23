@@ -1,4 +1,6 @@
 import axios from 'axios';
+import Comments from './Comments';
+
 
 const Posts = () => {
 
@@ -38,7 +40,11 @@ const Posts = () => {
                     {likes}
                     </div>
                 </div>
-                
+
+                <div className="comments">
+                    <Comments />
+                </div>
+
             </div>
         )
     }
