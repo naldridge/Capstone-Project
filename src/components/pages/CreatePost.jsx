@@ -41,7 +41,7 @@ const CreatePost = () => {
                 >
                     Post
                 </button>
-
+                
             </label>
         </div>
     )
