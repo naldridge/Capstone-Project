@@ -71,3 +71,7 @@
   font-variant: small-caps;
   margin-top: 3px;
 }
+
+.channelItem {
+  list-style-type: none;
+}
