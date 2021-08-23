@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { Divider } from "@chakra-ui/react";
+import { FiGithub } from "react-icons/fi";
+
 function Footer() {
   return (
     <div>
       <div className="footer-container">
         <section className="footer">
-          <Divider display="flex" />
           <div className="imput-areas">
-            <div>
-              <Link href="https://github.com/naldridge/Capstone-Project">
-                GitHub
-              </Link>
-            </div>
+            <a
+              href="https://github.com/naldridge/Capstone-Project"
+              target="_blank"
+            >
+              <FiGithub size="50" />
+            </a>
           </div>
         </section>
       </div>
