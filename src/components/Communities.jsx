@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { FiSidebar } from "react-icons/fi";
-import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 import "./Communities.css";
 import CreateCommunityButton from "./CreateCommunityButton";
 
@@ -13,24 +12,27 @@ class Communities extends Component {
   }
 
   componentDidMount() {
-    this._fetchDefaultChannels();
-    console.log("state: ", this.state.channel);
+    this._fetchAllChannels();
   }
 
-  async _fetchDefaultChannels() {
-    const url = "http://localhost:3333/channel/default";
+  async _fetchAllChannels() {
+    const url = "http://localhost:3333/channel/";
     const response = await fetch(url).then((response) => response.json());
 
-    const defaultChannels = response;
-    console.log("default channels: ", defaultChannels);
+    const channels = response;
+    console.log("all channels: ", channels);
 
     this.setState({
-      channel: [defaultChannels],
+      channel: channels,
     });
+
+    console.log("state: ", this.state);
   }
 
   render() {
     const { channel } = this.state;
+
+    console.log("channel: ", channel, Array.isArray(channel));
 
     return (
       <>
