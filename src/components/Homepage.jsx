@@ -1,7 +1,30 @@
 import { Card } from "react-bootstrap";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Heading, Box, Text, Button, Spacer, Divider } from "@chakra-ui/react";
 import Footer from "./Footer";
+
+const DefaultChannelsList = () => {
+  const [channels, setChannels] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const url = "http://localhost:3333/channel/default";
+      const response = await fetch(url).then((response) => response.json());
+      const channels = response;
+      setChannels(channels);
+    })();
+  }, [setChannels])
+ 
+  return (
+    <div className="defaultChannelsList">
+      {channels.map((channel, index) => (
+        <div classname="defaultChannel" key={index}>
+          <Card.Link href={`/channel/${channel.slug}`}>{channel.channel_name}</Card.Link>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 const HomePage = () => {
   return (
@@ -51,14 +74,7 @@ const HomePage = () => {
               <Card.Title>
                 Check out some of these featured communities!
               </Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">
-                <Card.Link href="#">Another Link</Card.Link>
-              </Card.Subtitle>
-              <Card.Text></Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
+              <DefaultChannelsList />
             </Card.Body>
           </Card>
         </div>
