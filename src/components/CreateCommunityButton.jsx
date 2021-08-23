@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+import axios from "axios";
 import {
   Modal,
   ModalOverlay,
@@ -15,6 +17,22 @@ import {
 } from "@chakra-ui/react";
 
 function InitialFocus() {
+  const addCommunity = "http:/localhost:3333/community/add";
+  const [community, setCommunity] = useState(" ");
+  const [description, setDescription] = useState(" ");
+  const postToApi = () => {
+    axios
+      .post(addCommunity, communityData)
+      .then((response) => console.log(response))
+      .catch((error) => alert(error));
+  };
+
+  const communityData = {
+    user_id: " ",
+    channel_id: " ",
+    title: community,
+    text_content: description,
+  };
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef();
@@ -42,21 +60,35 @@ function InitialFocus() {
         finalFocusRef={finalRef}
         isOpen={isOpen}
         onClose={onClose}
+        isCentered
       >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Create a community</ModalHeader>
           <ModalCloseButton />
-          <ModalBody pb={6}>
+          <ModalBody pb={10}>
             <form>
               <FormControl>
                 <FormLabel>Name of Community</FormLabel>
-                <Input ref={initialRef} placeholder="Community Name" />
+                <Input
+                  ref={initialRef}
+                  value={community}
+                  onChange={(e) => {
+                    setCommunity(e.target.value);
+                  }}
+                  placeholder="Community Name"
+                />
               </FormControl>
 
               <FormControl mt={4}>
                 <FormLabel>Description of community</FormLabel>
-                <Input placeholder="Description" />
+                <Input
+                  value={description}
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                  }}
+                  placeholder="Description"
+                />
               </FormControl>
             </form>
           </ModalBody>
@@ -70,6 +102,10 @@ function InitialFocus() {
               borderColor="#718096"
               color="white"
               mr="5"
+              type="submit"
+              onClick={() => {
+                postToApi();
+              }}
             >
               Submit
             </Button>
