@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar";
 
-export class Channel extends Component {
-  render() {
-    return (
-      <div>
-        <p> this is the channel page. </p>
-      </div>
-    );
+const Channel = () => {
+  const getChannel = () => {
+    axios.get()
+    .then()
+    .catch(error => alert(error))
   }
+  return (
+    
+  )
 }
+
 
 export default Channel;
