@@ -67,7 +67,6 @@ class Communities extends Component {
               <input className="submitComment" type="submit" value="comment" />
             </form>
           </div>
-          {/* {!!channel.length > 0 ? (<Sidebar channel={channel} />) : null} */}
         </div>
       </>
     );
