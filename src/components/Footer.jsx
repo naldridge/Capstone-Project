@@ -10,7 +10,9 @@ function Footer() {
           <Divider display="flex" />
           <div className="imput-areas">
             <div>
-              <Link>GitHub</Link>
+              <Link href="https://github.com/naldridge/Capstone-Project">
+                GitHub
+              </Link>
             </div>
           </div>
         </section>

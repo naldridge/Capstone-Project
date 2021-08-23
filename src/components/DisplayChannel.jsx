@@ -1,5 +1,8 @@
 import { Component } from 'react';
 import { withRouter } from 'react-router';
+import Posts from './pages/Posts';
+import CreatePost from './pages/CreatePost';
+
 
 class DisplayChannel extends Component {
     constructor(props) {
@@ -14,21 +17,18 @@ class DisplayChannel extends Component {
     }
 
     componentDidMount() {
-        const  slug  = this.props.match.params.slug;
+        const slug = this.props.match.params.slug;
         this._fetchChannel(slug);
-        
+    }
 
-
-        }
-
-   async _fetchChannel(slug) {
+    async _fetchChannel(slug) {
 
         const url = `http://localhost:3333/channel/${slug}`;
         console.log("url: ", url);
         const response = await fetch(url).then(response => response.json());
 
         console.log("response", response);
-        
+
 
         this.setState({
             channel_id: response.channel_id,
@@ -55,11 +55,31 @@ class DisplayChannel extends Component {
                 <div className="ModsList">
                     {/* map through moderators_list array */}
                 </div>
+                <div className="createPost">
+                    <CreatePost />
+                </div>
                 <div className="PostsDisplay">
                     <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
                     <div className="ShowPosts">
                         {/* Map through Posts */}
+                        <Posts />
                     </div>
+                    <div className="postComments">4 comments</div>
+                </div>
+                <div className="commentDisplay">
+                    <div className="commentorTitle">Comment as davey</div>
+                    <form className="commentForm">
+                        <textarea
+                            className="commentInput"
+                            type="text"
+                            placeholder="what are your thoughts"
+                        />
+                        <input className="submitComment" type="submit" value="comment" />
+                    </form>
+                </div>
+                <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
+                <div className="ShowPosts">
+                    {/* Map through Posts */}
                 </div>
             </div>
         )
