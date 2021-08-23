@@ -24,14 +24,10 @@ class DisplayChannel extends Component {
     async _fetchChannel(slug) {
 
         const url = `http://localhost:3333/channel/${slug}`;
-        console.log("url: ", url);
         const response = await fetch(url).then(response => response.json());
 
-        console.log("response", response);
-
-
         this.setState({
-            channel_id: response.channel_id,
+            channel_id: response.id,
             name: response.channel_name,
             description: response.description,
         })
@@ -61,8 +57,7 @@ class DisplayChannel extends Component {
                 <div className="PostsDisplay">
                     <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
                     <div className="ShowPosts">
-                        {/* Map through Posts */}
-                        <Posts />
+                        {!!this.state.channel_id ? (<Posts channel_id={this.state.channel_id} />) : (null)}
                     </div>
                     <div className="postComments">4 comments</div>
                 </div>
