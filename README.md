@@ -3,7 +3,7 @@
 
 # Fetch-Dev 
 
-The goal of this project was to construct a website for developers. Fetch-Dev is geared towards developers of all experience levels. The team responsible for Fetch-Dev is comprised of Jr developers who felt it necessary to construct a space where information, wisdom, and ideas could be shared freely. 
+The goal of this project was to construct an app for developers. Fetch-Dev is geared towards developers of all experience levels. The team responsible for Fetch-Dev is comprised of Jr developers who felt it necessary to construct a shared space for developers to exchange ideas and other information.
 
 Fetch-Dev Features 
 - Dashboard: provides user friendly navigation around the website.
