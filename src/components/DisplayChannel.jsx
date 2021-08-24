@@ -34,45 +34,43 @@ class DisplayChannel extends Component {
   render() {
     return (
       <div className="ChannelDisplayContainer">
-        <div className="mainDisplay" borderStyle="solid">
-          <div className="ChannelTitle">
-            <h2>{this.state.name}</h2>
-          </div>
+        <div className="ChannelTitle">
+          <h2>{this.state.name}</h2>
         </div>
-        <div className="mainDisplay">
-          <div className="ChannelDescription">
-            <p>{this.state.description}</p>
-          </div>
-
-          <div className="MembersList">
-            <ul>{/* map through members_list array */}</ul>
-          </div>
-          <div className="ModsList">
-            {/* map through moderators_list array */}
-          </div>
-          <div className="createPost">
-            <CreatePost />
-          </div>
+        <div className="ChannelDescription">
+          <p>{this.state.description}</p>
         </div>
-        <div className="mainDisplay">
-          <div className="PostsDisplay">
-            <div className="PostsFilter">
-              {/* Filter Posts by date, etc. */}
-            </div>
-            <div classname="mainDisplay">
-              <div className="ShowPosts">
-                {!!this.state.channel_id ? (
-                  <Posts channel_id={this.state.channel_id} />
-                ) : null}
-              </div>
-            </div>
-
-            <div className="postComments">4 comments</div>
-          </div>
-
+        <div className="MembersList">
+          <ul>{/* map through members_list array */}</ul>
+        </div>
+        <div className="ModsList">
+          {/* map through moderators_list array */}
+        </div>
+        <div className="createPost">
+          <CreatePost />
+        </div>
+        <div className="PostsDisplay">
           <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
-          <div className="ShowPosts">{/* Map through Posts */}</div>
+          <div className="ShowPosts">
+            {!!this.state.channel_id ? (
+              <Posts channel_id={this.state.channel_id} />
+            ) : null}
+          </div>
+          {/* <div className="postComments">4 comments</div> */}
         </div>
+        {/* <div className="commentDisplay">
+                    <div className="commentorTitle">Comment as davey</div>
+                    <form className="commentForm">
+                        <textarea
+                            className="commentInput"
+                            type="text"
+                            placeholder="what are your thoughts"
+                        />
+                        <input className="submitComment" type="submit" value="comment" />
+                    </form>
+                </div> */}
+        <div className="PostsFilter">{/* Filter Posts by date, etc. */}</div>
+        <div className="ShowPosts">{/* Map through Posts */}</div>
       </div>
     );
   }

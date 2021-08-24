@@ -44,3 +44,23 @@
 .infoHeaders {
   margin-bottom: 1rem;
 }
+.bioPart {
+  margin-bottom: 2rem;
+  margin-right: 0rem;
+}
+.bioTitle {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid;
+  margin-left: 30px;
+  margin: 2rem;
+}
+.bioTitle {
+  margin-left: 30px;
+}
+
+.bio {
+  margin-left: 30px;
+}
+.nameContainer {
+  padding-top: 3rem;
+}
