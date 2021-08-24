@@ -71,7 +71,33 @@
   font-variant: small-caps;
   margin-top: 3px;
 }
+.AllChannels {
+  
+  width: max-content;
+  height: max-content;
+  background-color: #2d3748;
+  margin-bottom: 0.5rem;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  left: 50%;
+  position: fixed;
+  font-size: large;
+  
+}
+.AllChannels h2 {
+  font-weight: bold;
+  font-size: larger;
+}
 
 .channelItem {
   list-style-type: none;
+  border-radius: 25%;
+  border-style: solid;
+  border: white;
 }
+
+

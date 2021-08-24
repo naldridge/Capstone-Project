@@ -57,8 +57,6 @@ const Comments = (props) => {
                 :
                 null}
 
-
-            )
         </div>
     )
 }
