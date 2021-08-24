@@ -37,7 +37,7 @@ export default function Sidebar(props) {
           {props.channel !== null ? showDefaultChannels(props.channel) : null}
         </NavItem>
 
-        <NavItem NavSpot="/explore" icon={FiSunrise} title="Explore" />
+        <NavItem NavSpot="/channel/devadvice" icon={FiSunrise} title="Explore" />
         <NavItem
           NavSpot="/communities"
           icon={FiBookOpen}

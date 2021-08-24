@@ -1,8 +1,12 @@
-import axios from "axios";
-import Comments from "./Comments";
-import Users from "./Users";
-import { useState, useEffect } from "react";
-import LikeButton from "./LikeButton";
+import axios from 'axios';
+import Comments from './Comments';
+import Users from './Users';
+import { useState, useEffect } from 'react';
+import LikeButton from './LikeButton';
+import './Posts.css';
+
+
+
 
 const Posts = (props) => {
   const [posts, setPosts] = useState([]);
