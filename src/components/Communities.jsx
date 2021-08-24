@@ -37,20 +37,22 @@ class Communities extends Component {
         <div>
           <CreateCommunityButton />
         </div>
-        <div className="AllChannels">
-          {channel.length > 0 ? (
-            <ul>
-              {channel.map((page, index) => (
-                <li className="channelItem" key={index}>
-                  <Link to={`/channel/${page.slug}`}>
-                    {page.channel_name}
-                  </Link>
-                </li>
-              ))
-              }
-            </ul>
-          ) : null}
+        <div className="mainDisplay">
+          <div className="AllChannels">
+            {channel.length > 0 ? (
+              <ul>
+                {channel.map((page, index) => (
+                  <li className="channelItem" key={index}>
+                    <Link to={`/channel/${page.slug}`}>
+                      {page.channel_name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
         </div>
+
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
