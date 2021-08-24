@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Communities.css";
-import CreateCommunityButton from "./CreateCommunityButton";
+// import CreateCommunityButton from "./CreateCommunityButton";
 
 class Communities extends Component {
   constructor(props) {
@@ -65,7 +65,7 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              Posted by Kevinmcallister12 1 week ago
+              Posted by Kevinmcallister12 6 days ago
             </div>
             <div className="postTitle">Dev Battlestations</div>
             <div className="postBody">

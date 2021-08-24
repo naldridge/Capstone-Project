@@ -14,18 +14,20 @@ const DefaultChannelsList = () => {
       const channels = response;
       setChannels(channels);
     })();
-  }, [setChannels])
- 
+  }, [setChannels]);
+
   return (
     <div className="defaultChannelsList">
       {channels.map((channel, index) => (
         <div classname="defaultChannel" key={index}>
-          <Card.Link href={`/channel/${channel.slug}`}>{channel.channel_name}</Card.Link>
+          <Card.Link href={`/channel/${channel.slug}`}>
+            {channel.channel_name}
+          </Card.Link>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 const HomePage = () => {
   return (
