@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 function InitialFocus() {
-  const addCommunity = "http:/localhost:3333/community/add";
+  const addCommunity = "http:/localhost:3333/channel/add_channel";
   const [community, setCommunity] = useState(" ");
   const [description, setDescription] = useState(" ");
   const postToApi = () => {
@@ -28,8 +28,6 @@ function InitialFocus() {
   };
 
   const communityData = {
-    user_id: " ",
-    channel_id: " ",
     title: community,
     text_content: description,
   };
