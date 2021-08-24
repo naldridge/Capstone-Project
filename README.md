@@ -1,13 +1,20 @@
 <img width="1434" alt="Screen Shot 2021-08-23 at 4 04 06 PM" src="https://user-images.githubusercontent.com/83563864/130657602-ff355456-afb7-43e0-842e-c3d5641823eb.png">
+
+
 # Fetch-Dev 
 
 The goal of this project was to construct a website for developers. Fetch-Dev is geared towards developers of all experience levels. The team responsible for Fetch-Dev is comprised of Jr developers who felt it necessary to construct a space where information, wisdom, and ideas could be shared freely. 
 
 Fetch-Dev Features 
-- Simple dashboard for user friendly   navigation.
-- User profiles that allow 
-- Channels that allow users to create posts as well as engage in the comments section with other developers.
-
+- Dashboard: provides user friendly navigation around the website.
+- Explore: provid interting articles with varying topics that will introduce users to the world of development. 
+- About: features the contributors of the project as well as how to connect with them.
+- User profiles: allows users to save and share the content they are passionate about.
+- Channels: allows users to create posts as well as engage in the comments section with other developers.
+- Add community: allows the user to create a community page for any development related topic.
+- Communities: view and engage with developers about a variety of topics
+- Log In: provides access to member content.
+- Create a free account: users are able to sign up for a free account and engage with the developer community, while also saving and liking posts that are relevant to them. 
 
 ## Technologies
 - Auth0
@@ -15,3 +22,7 @@ Fetch-Dev Features
 - Javascript
 - HTML5
 - CSS
+
+## Start
+- Npm i will allow the front end to start
+- Npm run dev will allow the back end to start
