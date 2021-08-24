@@ -48,7 +48,7 @@ const Comments = (props) => {
                         <li key={index}>
                             <p>{entry.text_content}</p>
                             <p><Users user_id={entry.user_id} /></p>
-                            <p>{entry.time_stamp}</p>
+                            <p>Just Now</p>
                         </li>
                     ))}
 
@@ -57,8 +57,6 @@ const Comments = (props) => {
                 :
                 null}
 
-
-            )
         </div>
     )
 }
