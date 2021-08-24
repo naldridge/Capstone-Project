@@ -51,9 +51,11 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
+              [DevAdvice] Posted by [User] 3 months ago
             </div>
-            <div className="postTitle">This Is The Title</div>
+
+            <div className="postTitle">Dev Advice</div>
+
             <div className="postBody">
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -69,9 +71,9 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
+              [Ruby] Posted by [User] 3 months ago
             </div>
-            <div className="postTitle">This Is The Title</div>
+            <div className="postTitle">Ruby</div>
             <div className="postBody">
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -87,9 +89,9 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
+              [Web Design] Posted by [User] 3 months ago
             </div>
-            <div className="postTitle">This Is The Title</div>
+            <div className="postTitle">Web Design</div>
             <div className="postBody">
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -105,9 +107,9 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
+              [Javascript] Posted by [User] 3 months ago
             </div>
-            <div className="postTitle">This Is The Title</div>
+            <div className="postTitle">JavaScript</div>
             <div className="postBody">
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -123,9 +125,9 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
+              [WindowsOS] Posted by [User] 3 months ago
             </div>
-            <div className="postTitle">This Is The Title</div>
+            <div className="postTitle">Windows</div>
             <div className="postBody">
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -141,9 +143,9 @@ class Communities extends Component {
         <div className="DefaultChannels">
           <div className="mainDisplay">
             <div className="communityName">
-              [Name of Community] Posted by [User] 3 months ago
+              [React] Posted by [User] 3 months ago
             </div>
-            <div className="postTitle">This Is The Title</div>
+            <div className="postTitle">React</div>
             <div className="postBody">
               "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
