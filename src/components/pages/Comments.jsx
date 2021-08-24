@@ -2,69 +2,65 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import LikeButton from './LikeButton';
 
-const Comments = () => {
-    const getComments = 'http://localhost:3333/comment/show_comments'
+const Comments = (props) => {
+
     const addComment = 'http://localhost:3333/comment/add'
     const [userComment, setUserComment] = useState(' ');
-    const [comment, setComment] = useState([ ])
-    
-    const postComment = () => {
-        axios.post(addComment, commentData)
-        .then((response) => {
-            console.log(response)
-            alert('Comment Posted')
-        })
-        .catch((error) => [
-            alert(error)
-        ])
-    }
+    const [comments, setComments] = useState([])
+
+
+
+    useEffect(async () => {
+        const getComments = `http://localhost:3333/comment/show_comments/${props.post_id}`;
+        const response = await fetch(getComments).then(response => response.json()).catch(err => alert(err));
+        setComments(response);
+
+    }, [setComments]);
+
+    /* 
+        const postComment = () => {
+            axios.post(addComment, commentData)
+                .then((response) => {
+                    console.log(response)
+                    alert('Comment Posted')
+                })
+                .catch((error) => [
+                    alert(error)
+                ])
+        } */
 
     // data to insert into table
-    const commentData = {
-        'id': ' ',
-        'channel_id': ' ',
-        'text_content' : userComment,
-        'likes': useState(<LikeButton likes={this.likes} />), 
-        'time_stamp': new Date(),
-    }
+    /*     const commentData = {
+            'channel_id': ' ',
+            'text_content': userComment,
+            'likes': useState(<LikeButton likes={this.likes} />),
+        } */
 
-    useEffect(() => {
-        axios.get(getComments)
-        .then((response) => {
-                setComment(response.data)} 
-        )
-        .catch(error => alert(error))
-    })
-   
 
-    for (let comments in comment) {
+
+
     return (
         <div className="commentContainer">
-            <div className="display">
-                {comments.text_content}
-            </div>
-            <div className="addComment">
-                <label htmlFor="">Make a comment
-                <input 
-                type="text"
-                value={userComment}
-                onChange={(e) => {setUserComment(e.target.value)}} 
-                />
-                <button
-                type='submit'
-                onClick={() => {
-                    postComment()
-                }}
-                >
-                Post Comment
-                </button>
-                </label>
-            </div>
-            <div className="likeButton">
-                <LikeButton />
-            </div>
+            {comments.length > 0 ? (
+                <ul>
+                    {comments.map((entry, index) => (
+                        <li key={index}>
+                            <p>{entry.text_content}</p>
+                            <p>{entry.user_id}</p>
+                            <p>{entry.date_stamp}</p>
+                        </li>
+                    ))}
+
+                </ul>
+            )
+                :
+                null}
+
+
+            )
         </div>
-    )}
+    )
 }
+
 
 export default Comments;

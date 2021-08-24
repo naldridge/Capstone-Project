@@ -6,14 +6,12 @@ import LikeButton from './LikeButton';
 
 const Posts = (props) => {
     const [posts, setPosts] = useState([]);
-
-   
+    
     useEffect(async () => {
-        console.log("any text", props);
         const getPosts = `http://localhost:3333/post/show_posts/${props.channel_id}`;
-        console.log("getposts: ", getPosts);
-        const response = await fetch(getPosts).then(response => response.json());
+        const response = await fetch(getPosts).then(response => response.json()).catch(err => alert(err));
         setPosts(response);
+        console.log("post response: ", response);
     }, [setPosts]);
 
     /*     const likeObject = {
@@ -32,12 +30,15 @@ const Posts = (props) => {
         <div className="PostsContainer">
             {posts.length > 0 ? (
                 <ul>
-                    {posts.map((entry, index) => {
+                    {posts.map((entry, index) => (
                         <li className="postItem" key={index}>
                             <h4>{entry.title}</h4>
                             <p>{entry.text_content}</p>
                             <p>User:{entry.user_id}</p>
                             <p>Posted:{entry.timestamp}</p>
+                            <div className="comments">
+                                <Comments post_id={entry.id}/>
+                            </div>
                             <button onClick={<LikeButton />}>
                                 Like
                             </button>
@@ -45,11 +46,11 @@ const Posts = (props) => {
                                 Comment
                             </button>
                         </li>
-                    })}
+                    ))}
                 </ul>
             )
                 :
-                null}
+                <p>Empty</p>}
         </div>
 
     )

@@ -32,12 +32,24 @@ class Communities extends Component {
   render() {
     const { channel } = this.state;
 
-    console.log("channel: ", channel, Array.isArray(channel));
-
     return (
       <>
         <div>
           <CreateCommunityButton />
+        </div>
+        <div className="AllChannels">
+          {channel.length > 0 ? (
+            <ul>
+              {channel.map((page, index) => (
+                <li className="channelItem" key={index}>
+                  <Link to={`/channel/${page.slug}`}>
+                    {page.channel_name}
+                  </Link>
+                </li>
+              ))
+              }
+            </ul>
+          ) : null}
         </div>
         <div className="DefaultChannels">
           <div className="mainDisplay">
