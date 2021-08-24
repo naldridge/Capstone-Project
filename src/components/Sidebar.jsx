@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Flex, Divider, Heading } from "@chakra-ui/react";
 import { FiHome, FiUser, FiSunrise, FiStar, FiBookOpen } from "react-icons/fi";
 import NavItem from "./NavItem";
-import HomePage from "./Homepage";
 
 function showDefaultChannels(channel) {
   return (

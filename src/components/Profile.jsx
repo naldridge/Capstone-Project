@@ -31,10 +31,6 @@ const Profile = () => {
               <div className="phoneDiv">
                 <h2 className="infoHeaders">Username:</h2>
                 <div>{user.nickname}</div>
-                {/* <div className="phoneDiv">
-                  <h2 className="infoHeaders">Phone:</h2>
-                  <div>{user.hobby}</div>
-                </div> */}
               </div>
             </div>
           </div>

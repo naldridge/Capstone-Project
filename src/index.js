@@ -7,8 +7,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import { Auth0Provider } from "@auth0/auth0-react";
 
-// import Auth0ProviderWithHistory from "./components/auth0-provider-with-history";
-
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,

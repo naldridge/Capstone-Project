@@ -1,7 +1,6 @@
 import React from "react";
-import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import { Heading, Box, Text, Button, Spacer } from "@chakra-ui/react";
-import { Height } from "@material-ui/icons";
+import { Card } from "react-bootstrap";
+import { Heading, Box, Text, Spacer } from "@chakra-ui/react";
 
 const About = () => {
   return (
@@ -32,11 +31,7 @@ const About = () => {
                 Full-Stack Developer and tech enthusiast. Based in Houston
               </Card.Text>
             </Card.Body>
-            {/* <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup> */}
+
             <Card.Body className="text-center">
               <Card.Link href="https://github.com/david-vasek">
                 GitHub
@@ -57,11 +52,7 @@ const About = () => {
                 A passionate Full-Stack Developer based in Atlanta{" "}
               </Card.Text>
             </Card.Body>
-            {/* <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup> */}
+
             <Card.Body className="text-center">
               <Card.Link href="https://github.com/brittany-fisher21">
                 GitHub
@@ -85,11 +76,7 @@ const About = () => {
                 Full-Stack Developer Bootcamp
               </Card.Text>
             </Card.Body>
-            {/* <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup> */}
+
             <Card.Body className="text-center">
               <Card.Link href="https://github.com/naldridge">GitHub</Card.Link>
               <Card.Link href="https://www.linkedin.com/in/nicholas-aldridge-177479145/">
@@ -111,11 +98,7 @@ const About = () => {
                 Follow my journey line for line
               </Card.Text>
             </Card.Body>
-            {/* <ListGroup className="list-group-flush">
-              <ListGroupItem>Cras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup> */}
+
             <Card.Body className="text-center">
               <Card.Link href="https://github.com/1immanuel">GitHub</Card.Link>
               <Card.Link href="https://www.linkedin.com/in/1immanuel/">
