@@ -9,8 +9,8 @@ Fetch-Dev Features
 
 
 ## Technologies
--Auth0
--React
--Javascript
--HTML5
--CSS
+- Auth0
+- React
+- Javascript
+- HTML5
+- CSS
