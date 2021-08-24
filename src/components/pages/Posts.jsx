@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Comments from './Comments';
+import Users from './Users';
 import { useState, useEffect } from 'react';
 import LikeButton from './LikeButton';
 
@@ -11,7 +12,6 @@ const Posts = (props) => {
         const getPosts = `http://localhost:3333/post/show_posts/${props.channel_id}`;
         const response = await fetch(getPosts).then(response => response.json()).catch(err => alert(err));
         setPosts(response);
-        console.log("post response: ", response);
     }, [setPosts]);
 
     /*     const likeObject = {
@@ -34,8 +34,8 @@ const Posts = (props) => {
                         <li className="postItem" key={index}>
                             <h4>{entry.title}</h4>
                             <p>{entry.text_content}</p>
-                            <p>User:{entry.user_id}</p>
-                            <p>Posted:{entry.timestamp}</p>
+                            <p><Users user_id={entry.user_id} /></p>
+                            <p>Posted:{entry.time_stamp}</p>
                             <div className="comments">
                                 <Comments post_id={entry.id}/>
                             </div>

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import LikeButton from './LikeButton';
+import Users from './Users';
 
 const Comments = (props) => {
 
@@ -46,8 +47,8 @@ const Comments = (props) => {
                     {comments.map((entry, index) => (
                         <li key={index}>
                             <p>{entry.text_content}</p>
-                            <p>{entry.user_id}</p>
-                            <p>{entry.date_stamp}</p>
+                            <p><Users user_id={entry.user_id} /></p>
+                            <p>{entry.time_stamp}</p>
                         </li>
                     ))}
 
