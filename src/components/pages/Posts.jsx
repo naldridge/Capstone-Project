@@ -3,6 +3,8 @@ import Comments from './Comments';
 import Users from './Users';
 import { useState, useEffect } from 'react';
 import LikeButton from './LikeButton';
+import './Posts.css';
+
 
 
 
