@@ -31,7 +31,7 @@ const Comments = () => {
     useEffect(() => {
         axios.get(getComments)
         .then((response) => {
-                setComment(response.data)} 
+            setComment(response.data)} 
         )
         .catch(error => alert(error))
     })
