@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import LikeButton from './LikeButton';
 
 
+
 const Posts = (props) => {
     const [posts, setPosts] = useState([]);
     
@@ -26,6 +27,8 @@ const Posts = (props) => {
                 .catch(error => alert(error))
         }) */
 
+
+
     return (
         <div className="PostsContainer">
             {posts.length > 0 ? (
@@ -35,7 +38,7 @@ const Posts = (props) => {
                             <h4>{entry.title}</h4>
                             <p>{entry.text_content}</p>
                             <p><Users user_id={entry.user_id} /></p>
-                            <p>Posted:{entry.time_stamp}</p>
+                            <p>Posted: Just Now</p>
                             <div className="comments">
                                 <Comments post_id={entry.id}/>
                             </div>
